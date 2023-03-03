@@ -3,20 +3,18 @@ import iconSet from "../../assets/icons/beta-bus.json";
 import IcomoonReact from "icomoon-react";
 import colors from "../../constants/colors";
 
-const SocialButton = ({ text, style, icon, iconID, ...props }) => {
+const SocialButton = ({ text, style, icon, iconName, iconSize, ...props }) => {
   return (
     <Button style={style} {...props}>
-      {!!icon && <IcomoonReact style={Icon} iconSet={iconSet} icon={iconID} />}
+      {!!icon && <Icon icon={iconName}></Icon>}
       {text}
     </Button>
   );
 };
 
-const Icon = styled.img`
-  width: 41px;
-  height: 41px;
-  margin-left: 21px;
-`;
+const Icon = ({ icon }) => {
+  return <IcomoonReact iconSet={iconSet} color="#444" size={41} icon={icon} />;
+};
 
 const Button = styled.button`
   display: flex;

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import colors from "../../constants/colors";
 
-const Button = ({ text, ...props }) => {
-  return <MainButton {...props}>{text}</MainButton>;
+const Button = ({ text, style }) => {
+  return <MainButton style={style}>{text}</MainButton>;
 };
 
 const MainButton = styled.button`

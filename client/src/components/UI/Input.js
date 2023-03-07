@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import colors from "../../constants/colors";
 
-const AuthInput = ({ type, placeholder, labelText }) => {
+const AuthInput = ({ type, style, placeholder, labelText }) => {
   return (
-    <InputContainer>
+    <InputContainer style={style}>
       <Label>{labelText}</Label>
       <Input type={type} placeholder={placeholder}></Input>
     </InputContainer>

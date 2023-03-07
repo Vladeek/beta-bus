@@ -1,24 +1,19 @@
 import styled from "styled-components";
-import iconSet from "../../assets/icons/beta-bus.json";
-import IcomoonReact from "icomoon-react";
 import colors from "../../constants/colors";
+import Icon from "./Icon";
 
-const SocialButton = ({ text, style, icon, iconName, iconSize, ...props }) => {
+const SocialButton = ({ text, style, icon, iconName, iconStyle, ...props }) => {
   return (
     <Button style={style} {...props}>
-      {!!icon && <Icon icon={iconName}></Icon>}
+      {!!icon && <Icon icon={iconName} iconStyle={iconStyle}></Icon>}
       {text}
     </Button>
   );
 };
 
-const Icon = ({ icon }) => {
-  return <IcomoonReact iconSet={iconSet} color="#444" size={41} icon={icon} />;
-};
-
 const Button = styled.button`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   font-family: "Open Sans";
   font-weight: 600;

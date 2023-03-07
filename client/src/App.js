@@ -5,13 +5,13 @@ import Registration from "./pages/Registration";
 
 function App() {
   return (
-    <div>
+    <>
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
       </Routes>
-    </div>
+    </>
   );
 }
 

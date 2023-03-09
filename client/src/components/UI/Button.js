@@ -1,8 +1,23 @@
 import styled from "styled-components";
 import colors from "../../constants/colors";
+import Icon from "./Icon";
 
-const Button = ({ text, style }) => {
-  return <MainButton style={style}>{text}</MainButton>;
+const Button = ({
+  text,
+  style,
+  hoverColor,
+  icon,
+  iconName,
+  iconStyle,
+  social,
+  ...props
+}) => {
+  return (
+    <MainButton style={style} {...props}>
+      {!!icon && <Icon icon={iconName} style={iconStyle}></Icon>}
+      {text}
+    </MainButton>
+  );
 };
 
 const MainButton = styled.button`
@@ -13,7 +28,7 @@ const MainButton = styled.button`
   min-height: 67px;
   font-family: "Open Sans";
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 0.1em;
   color: ${colors.blue};
   background-color: ${colors.white};
@@ -25,6 +40,19 @@ const MainButton = styled.button`
     color: ${colors.white};
     background-color: ${colors.blue};
     cursor: pointer;
+  }
+`;
+
+const SocialButton = styled(MainButton)`
+  margin-top: 30px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  color: ${colors.lightBlue};
+  letter-spacing: normal;
+  justify-content: space-evenly;
+  &:hover {
+    color: ${colors.white};
   }
 `;
 

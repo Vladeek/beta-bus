@@ -32,6 +32,8 @@ const Input = styled.input`
   height: 35px;
   :focus {
     color: ${colors.white};
+    outline: 0;
+    border: 2px solid ${colors.white};
   }
   ::placeholder {
     padding: 4px 244px 15px 45px;

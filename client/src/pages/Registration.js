@@ -1,19 +1,12 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
-import SocialButton from "../components/UI/SocialButton";
-import Input from "../components/UI/Input";
 import Button from "../components/UI/Button";
+import Input from "../components/UI/Input";
 import CheckBox from "../components/UI/CheckBox";
 import colors from "../constants/colors";
-
-const socialButtonStyle = {};
-const marginTop20 = {
-  marginTop: "20px",
-};
-const marginTop30 = {
-  marginTop: "30px",
-};
+import spaceShip from "../assets/img/spaceShip.png";
+import dots from "../assets/img/dots.png";
 
 const Registration = (props) => {
   const navigate = useNavigate();
@@ -21,32 +14,38 @@ const Registration = (props) => {
     <MainContainer>
       <SignUpContainer>
         <SliderContainer>
-          <SliderTitle>Plan Your Activities So you can Launch High</SliderTitle>
-          <Slider></Slider>
-          <Dots></Dots>
+          <SliderTitle>
+            Plan Your Activities
+            <br /> So you can Launch High
+          </SliderTitle>
+          <Slider />
+          <Dots />
         </SliderContainer>
         <FormContainer>
           <FormTitle>Sign Up or Login</FormTitle>
           <Input
-            style={marginTop20}
+            style={{ marginTop: 20 }}
             labelText={"Fullname"}
             type={"text"}
             placeholder={"Enter your Fullname"}
-          ></Input>
+          />
           <Input
-            style={marginTop20}
+            style={{ marginTop: 20 }}
             labelText={"Password"}
             type={"password"}
             placeholder={"**********************"}
-          ></Input>
+          />
           <Input
-            style={marginTop20}
+            style={{ marginTop: 20 }}
             labelText={"E-mail"}
             type={"email"}
             placeholder={"Enter your E-mail Address"}
-          ></Input>
-          <CheckBox text={"I agree to  all the Terms & Conditions"}></CheckBox>
-          <Button text={"Sign Up"} style={{ marginTop: 43 }}></Button>
+          />
+          <CheckBox
+            text={"I agree to  all the Terms & Conditions"}
+            style={{ marginLeft: 20 }}
+          />
+          <Button text={"Sign Up"} style={{ marginTop: 43 }} />
           <Link
             onClick={() => {
               navigate("/login");
@@ -54,34 +53,55 @@ const Registration = (props) => {
           >
             Already have an account?
           </Link>
-          <SocialButton
-            style={marginTop30}
-            text={"Sign up with Facebook"}
+          <Button
+            style={{
+              marginTop: 30,
+              borderRadius: "15px",
+              fontWeight: 600,
+              fontSize: "18px",
+              color: colors.lightBlue,
+              letterSpacing: "normal",
+              justifyContent: "space-evenly",
+            }}
+            text={"Sign in with Facebook"}
             icon={true}
             iconName={"facebook"}
-            iconStyle={socialButtonStyle}
-          ></SocialButton>
-          <SocialButton
-            style={marginTop30}
-            text={"Sign up with Twitter"}
+          />
+          <Button
+            style={{
+              marginTop: 30,
+              borderRadius: "15px",
+              fontWeight: 600,
+              fontSize: "18px",
+              color: colors.lightBlue,
+              letterSpacing: "normal",
+              justifyContent: "space-evenly",
+            }}
+            text={"Sign in with Twitter"}
             icon={true}
             iconName={"twitter"}
-            iconStyle={socialButtonStyle}
-          ></SocialButton>
-          <SocialButton
-            style={marginTop30}
-            text={"Sign up with Google"}
+          />
+          <Button
+            style={{
+              marginTop: 30,
+              borderRadius: "15px",
+              fontWeight: 600,
+              fontSize: "18px",
+              color: colors.lightBlue,
+              letterSpacing: "normal",
+              justifyContent: "space-evenly",
+            }}
+            text={"Sign in with Google"}
             icon={true}
             iconName={"google"}
-            iconStyle={socialButtonStyle}
-          ></SocialButton>
+          />
         </FormContainer>
       </SignUpContainer>
     </MainContainer>
   );
 };
 
-const MainContainer = styled.div`
+export const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,25 +110,24 @@ const MainContainer = styled.div`
   font-family: "Open Sans";
 `;
 
-const SignUpContainer = styled.div`
+export const SignUpContainer = styled.div`
   display: flex;
   width: 1440px;
-  height: 100%;
+  height: 100vh;
   border-radius: 15px;
 `;
 
-const SliderContainer = styled.div`
+export const SliderContainer = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 44%;
   flex-direction: column;
-  width: 50%;
   height: 100%;
   background-color: ${colors.white};
 `;
 
-const SliderTitle = styled.div`
-  width: 430px;
-  margin-top: 86px;
+export const SliderTitle = styled.div`
   color: ${colors.lightBlue};
   font-weight: 700;
   font-size: 32px;
@@ -117,26 +136,32 @@ const SliderTitle = styled.div`
   opacity: 0.75;
 `;
 
-const Slider = styled.div`
+export const Slider = styled.div`
   width: 430px;
   height: 645px;
   margin-top: 33px;
-  background: url("https://ruseller.com/css/images/header1.jpg");
+  background: url(${spaceShip});
 `;
 
-const Dots = styled.div`
-  background: url("../assets/img/dots.png");
+export const Dots = styled.div`
+  width: 244px;
+  height: 52px;
+  margin-top: 70px;
+  background: url(${dots});
 `;
 
-const FormContainer = styled.div`
+export const FormContainer = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 50%;
+  width: 56%;
   background-color: ${colors.blue};
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 0px 0px 30px;
 `;
 
-const FormTitle = styled.div`
+export const FormTitle = styled.div`
   margin-top: 34px;
   font-weight: 700;
   font-size: 25px;
@@ -144,7 +169,7 @@ const FormTitle = styled.div`
   opacity: 0.8;
 `;
 
-const Link = styled.a`
+export const Link = styled.a`
   margin-top: 40px;
   text-decoration: underline;
   color: ${colors.white};

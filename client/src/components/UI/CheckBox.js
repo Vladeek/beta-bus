@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import colors from "../../constants/colors";
 
-const CheckBox = ({ text }) => {
+const CheckBox = ({ text, style }) => {
   return (
-    <CheckTerm>
-      <input type="checkbox" name="scales" />
-      <label style={{ marginLeft: 20 }}>{text}</label>
-    </CheckTerm>
+    <TermsCheckBox>
+      <input type="checkbox" />
+      <label style={style}>{text}</label>
+    </TermsCheckBox>
   );
 };
 
-const CheckTerm = styled.div`
+const TermsCheckBox = styled.div`
   margin-top: 40px;
   text-decoration: underline;
   color: ${colors.white};

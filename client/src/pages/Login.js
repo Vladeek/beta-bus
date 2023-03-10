@@ -31,15 +31,8 @@ const Login = (props) => {
           </SliderTitle>
           <Slider {...settings}>
             <div>
-              <h1>123213</h1>
+              <SliderItem />
             </div>
-            <div>
-              <h1>3333</h1>
-            </div>
-            <div>
-              <h1>2222</h1>
-            </div>
-            {/* <SliderItem /> */}
           </Slider>
         </SliderContainer>
         <FormContainer>

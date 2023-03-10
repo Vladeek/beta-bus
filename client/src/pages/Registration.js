@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
+import Slider from "react-slick";
 import Button from "../components/UI/Button";
 import Input from "../components/UI/Input";
 import CheckBox from "../components/UI/CheckBox";
 import colors from "../constants/colors";
 import spaceShip from "../assets/img/spaceShip.png";
-import dots from "../assets/img/dots.png";
 
 const Registration = (props) => {
   const navigate = useNavigate();
@@ -19,7 +19,6 @@ const Registration = (props) => {
             <br /> So you can Launch High
           </SliderTitle>
           <Slider />
-          <Dots />
         </SliderContainer>
         <FormContainer>
           <FormTitle>Sign Up or Login</FormTitle>
@@ -45,7 +44,7 @@ const Registration = (props) => {
             text={"I agree to  all the Terms & Conditions"}
             style={{ marginLeft: 20 }}
           />
-          <Button text={"Sign Up"} style={{ marginTop: 43 }} />
+          <Button text={"Sign Up"} style={{ marginTop: 43 }} social={false} />
           <Link
             onClick={() => {
               navigate("/login");
@@ -54,44 +53,20 @@ const Registration = (props) => {
             Already have an account?
           </Link>
           <Button
-            style={{
-              marginTop: 30,
-              borderRadius: "15px",
-              fontWeight: 600,
-              fontSize: "18px",
-              color: colors.lightBlue,
-              letterSpacing: "normal",
-              justifyContent: "space-evenly",
-            }}
-            text={"Sign in with Facebook"}
+            text={"Sign up with Facebook"}
+            social={true}
             icon={true}
             iconName={"facebook"}
           />
           <Button
-            style={{
-              marginTop: 30,
-              borderRadius: "15px",
-              fontWeight: 600,
-              fontSize: "18px",
-              color: colors.lightBlue,
-              letterSpacing: "normal",
-              justifyContent: "space-evenly",
-            }}
-            text={"Sign in with Twitter"}
+            text={"Sign up with Twitter"}
+            social={true}
             icon={true}
             iconName={"twitter"}
           />
           <Button
-            style={{
-              marginTop: 30,
-              borderRadius: "15px",
-              fontWeight: 600,
-              fontSize: "18px",
-              color: colors.lightBlue,
-              letterSpacing: "normal",
-              justifyContent: "space-evenly",
-            }}
-            text={"Sign in with Google"}
+            text={"Sign up with Google"}
+            social={true}
             icon={true}
             iconName={"google"}
           />
@@ -136,18 +111,11 @@ export const SliderTitle = styled.div`
   opacity: 0.75;
 `;
 
-export const Slider = styled.div`
+export const SliderItem = styled.div`
   width: 430px;
   height: 645px;
   margin-top: 33px;
   background: url(${spaceShip});
-`;
-
-export const Dots = styled.div`
-  width: 244px;
-  height: 52px;
-  margin-top: 70px;
-  background: url(${dots});
 `;
 
 export const FormContainer = styled.div`

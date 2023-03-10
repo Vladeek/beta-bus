@@ -7,4 +7,5 @@ const Icon = ({ icon, iconStyle }) => {
   );
 };
 
+
 export default Icon;

@@ -13,10 +13,18 @@ const Button = ({
   ...props
 }) => {
   return (
-    <MainButton style={style} {...props}>
-      {!!icon && <Icon icon={iconName} style={iconStyle}></Icon>}
-      {text}
-    </MainButton>
+    <>
+      {social ? (
+        <SocialButton style={style} {...props}>
+          {!!icon && <Icon icon={iconName} style={iconStyle}></Icon>}
+          {text}
+        </SocialButton>
+      ) : (
+        <MainButton style={style} {...props}>
+          {text}
+        </MainButton>
+      )}
+    </>
   );
 };
 
@@ -53,6 +61,7 @@ const SocialButton = styled(MainButton)`
   justify-content: space-evenly;
   &:hover {
     color: ${colors.white};
+    background-color: ${colors.blue};
   }
 `;
 

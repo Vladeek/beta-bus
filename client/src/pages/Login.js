@@ -1,6 +1,6 @@
-import Slider from "react-slick";
-import Button from "../components/UI/Button";
-import Input from "../components/UI/Input";
+import Slider from 'react-slick'
+import Button from '../components/UI/Button'
+import Input from '../components/UI/Input'
 import {
   FormContainer,
   FormTitle,
@@ -9,7 +9,7 @@ import {
   SliderContainer,
   SliderItem,
   SliderTitle,
-} from "./Registration";
+} from './Registration'
 
 const Login = (props) => {
   const settings = {
@@ -19,7 +19,7 @@ const Login = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-  };
+  }
 
   return (
     <MainContainer>
@@ -46,32 +46,32 @@ const Login = (props) => {
         <FormTitle>Sign Up or Login</FormTitle>
         <Input
           style={{ marginTop: 20 }}
-          labelText={"Fullname"}
-          type={"text"}
-          placeholder={"Enter your Fullname"}
+          labelText={'Fullname'}
+          type={'text'}
+          placeholder={'Enter your Fullname'}
         />
         <Input
           style={{ marginTop: 20 }}
-          labelText={"Password"}
-          type={"password"}
-          placeholder={"**********************"}
+          labelText={'Password'}
+          type={'password'}
+          placeholder={'**********************'}
         />
-        <Button text={"Sign In"} style={{ marginTop: 43 }} social={false} />
-        <StyledLink to="/registration">Not registered yet?</StyledLink>
+        <Button text={'Sign In'} style={{ marginTop: 43 }} social={false} />
+        <StyledLink to='/registration'>Not registered yet?</StyledLink>
         <Button
-          text={"Sign in with Facebook"}
+          text={'Sign in with Facebook'}
           icon={true}
-          iconName={"facebook"}
+          iconName={'facebook'}
         />
         <Button
-          text={"Sign in with Twitter"}
+          text={'Sign in with Twitter'}
           icon={true}
-          iconName={"twitter"}
+          iconName={'twitter'}
         />
-        <Button text={"Sign in with Google"} icon={true} iconName={"google"} />
+        <Button text={'Sign in with Google'} icon={true} iconName={'google'} />
       </FormContainer>
     </MainContainer>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

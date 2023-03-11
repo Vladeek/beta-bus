@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import colors from "../../constants/colors";
+import styled from 'styled-components'
+import colors from '../../constants/colors'
 
 const AuthInput = ({ type, style, placeholder, labelText }) => {
   return (
@@ -7,21 +7,21 @@ const AuthInput = ({ type, style, placeholder, labelText }) => {
       <Label>{labelText}</Label>
       <Input type={type} placeholder={placeholder}></Input>
     </InputContainer>
-  );
-};
+  )
+}
 
 const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
-  font-family: "Open Sans";
-`;
+  font-family: 'Open Sans';
+`
 
 const Label = styled.div`
   margin-bottom: 10px;
   color: ${colors.white};
   font-weight: 600;
   font-size: 20px;
-`;
+`
 
 const Input = styled.input`
   background-color: ${colors.blue};
@@ -41,6 +41,6 @@ const Input = styled.input`
     opacity: 0.5;
     font-size: 14px;
   }
-`;
+`
 
-export default AuthInput;
+export default AuthInput

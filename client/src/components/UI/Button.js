@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import colors from "../../constants/colors";
-import Icon from "./Icon";
+import styled from 'styled-components'
+import colors from '../../constants/colors'
+import Icon from './Icon'
 
 const Button = ({ text, style, hoverColor, icon, iconName, ...props }) => {
   return (
@@ -16,8 +16,8 @@ const Button = ({ text, style, hoverColor, icon, iconName, ...props }) => {
         </MainButton>
       )}
     </>
-  );
-};
+  )
+}
 
 const MainButton = styled.button`
   display: flex;
@@ -25,7 +25,7 @@ const MainButton = styled.button`
   align-items: center;
   min-width: 460px;
   min-height: 67px;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 0.1em;
@@ -40,7 +40,7 @@ const MainButton = styled.button`
     background-color: ${colors.blue};
     cursor: pointer;
   }
-`;
+`
 
 const SocialButton = styled(MainButton)`
   margin-top: 30px;
@@ -54,6 +54,6 @@ const SocialButton = styled(MainButton)`
     color: ${colors.white};
     background-color: ${colors.blue};
   }
-`;
+`
 
-export default Button;
+export default Button

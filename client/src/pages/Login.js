@@ -1,8 +1,6 @@
-import { useNavigate } from 'react-router-dom'
-
-import Slider from 'react-slick'
-import Button from '../components/UI/Button'
-import Input from '../components/UI/Input'
+import Slider from "react-slick";
+import Button from "../components/UI/Button";
+import Input from "../components/UI/Input";
 import {
   FormContainer,
   FormTitle,
@@ -11,7 +9,7 @@ import {
   SliderContainer,
   SliderItem,
   SliderTitle,
-} from './Registration'
+} from "./Registration";
 
 const Login = (props) => {
   const settings = {
@@ -21,11 +19,10 @@ const Login = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-  }
+  };
 
   return (
     <MainContainer>
-      {/* <SignUpContainer> абсолютно ненужный контейнер снести  его  */}
       <SliderContainer>
         <SliderTitle>
           Plan Your Activities
@@ -49,40 +46,32 @@ const Login = (props) => {
         <FormTitle>Sign Up or Login</FormTitle>
         <Input
           style={{ marginTop: 20 }}
-          labelText={'Fullname'}
-          type={'text'}
-          placeholder={'Enter your Fullname'}
+          labelText={"Fullname"}
+          type={"text"}
+          placeholder={"Enter your Fullname"}
         />
         <Input
           style={{ marginTop: 20 }}
-          labelText={'Password'}
-          type={'password'}
-          placeholder={'**********************'}
+          labelText={"Password"}
+          type={"password"}
+          placeholder={"**********************"}
         />
-        <Button text={'Sign In'} style={{ marginTop: 43 }} social={false} />
-        <StyledLink to='/registration'>Not registered yet?</StyledLink>
+        <Button text={"Sign In"} style={{ marginTop: 43 }} social={false} />
+        <StyledLink to="/registration">Not registered yet?</StyledLink>
         <Button
-          text={'Sign in with Facebook'}
-          social={true}
+          text={"Sign in with Facebook"}
           icon={true}
-          iconName={'facebook'}
-        />
-        <Button
-          text={'Sign in with Twitter'}
-          social={true}
-          icon={true}
-          iconName={'twitter'}
+          iconName={"facebook"}
         />
         <Button
-          social={true}
-          text={'Sign in with Google'}
+          text={"Sign in with Twitter"}
           icon={true}
-          iconName={'google'}
+          iconName={"twitter"}
         />
+        <Button text={"Sign in with Google"} icon={true} iconName={"google"} />
       </FormContainer>
-      {/* </SignUpContainer> */}
     </MainContainer>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

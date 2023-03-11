@@ -2,21 +2,12 @@ import styled from "styled-components";
 import colors from "../../constants/colors";
 import Icon from "./Icon";
 
-const Button = ({
-  text,
-  style,
-  hoverColor,
-  icon,
-  iconName,
-  iconStyle,
-  social,
-  ...props
-}) => {
+const Button = ({ text, style, hoverColor, icon, iconName, ...props }) => {
   return (
     <>
-      {social ? (
+      {icon ? (
         <SocialButton style={style} {...props}>
-          {!!icon && <Icon icon={iconName} style={iconStyle}></Icon>}
+          <Icon icon={iconName}></Icon>
           {text}
         </SocialButton>
       ) : (
